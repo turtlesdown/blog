@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{{ range .site.posts }}
+<article>
+  <h1>{{ .title }}</h1>
+  <cite>Posted on {{ .date | date_to_string }}</cite>
+  {{ .content }}
+</article>
+{{ end }}

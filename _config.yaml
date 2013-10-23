@@ -1,0 +1,13 @@
+title: Turtles Down
+author: Gunnar Aasen
+email: gunnar.r.aasen@gmail.com
+baseurl: http://turtlesdown.me/
+RSSlink: http://turtlesdown.me/feed
+twitter: https://twitter.com/turtlesdown
+github: https://github.com/turtlesdown
+
+dest: /Users/gunnar/Sites/test-site
+destignore:
+  - .git
+  - README.md
+  - CNAME

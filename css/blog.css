@@ -1,0 +1,134 @@
+/* http://css-tricks.com/perfect-full-page-background-image/ */
+html {
+  background: url(static/img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+    padding-top: 20px;
+    font-size: 16px;
+    font-family: "Open Sans",serif;
+    background: transparent;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+h1 {
+  font-family: "Abel", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: "Abel", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* Override B3 .panel adding a subtly transparent background */
+.panel {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.margin-base-vertical {
+    margin: 40px 0;
+}
+
+/* Footer style */
+.bs-footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-top: 100px;
+  color: #777;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-links {
+  margin: 10px 0;
+  padding-left: 0;
+}
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .bs-footer {
+    text-align: left;
+  }
+  .bs-footer p {
+    margin-bottom: 0;
+  }
+}
+
+/* img style */
+
+figcaption {
+  display: block
+}
+
+figure .left {
+  float: left;
+  margin-right: 1em;
+  margin-left:1em
+}
+
+figure .right {
+  float: right;
+  margin-right: 1em;
+  margin-left: 1em
+}
+
+.hid:hover figcaption {
+  opacity: 100
+}
+
+.hid figcaption {
+  opacity: 0;
+  transition: opacity 0.5s
+}
+
+figcaption{
+  font-size: .7em
+}
+
+figure>figcaption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.56);
+  color: white;
+  font-family: Helvetica;
+  font-size: 14px
+}
+
+figure>figcaption>h4 {
+  margin: 0 0 8px;
+  padding:0 0 5px;
+  box-shadow:0 1px 0 0 rgba(255,255,255,0.35);
+  text-shadow: none;
+  color: white;
+  font-size: 17px
+}
+
+figure>figcaption>p {
+  margin: 0;
+  line-height: 1.25
+}
