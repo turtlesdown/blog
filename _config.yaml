@@ -9,7 +9,7 @@ twitter: https://twitter.com/turtlesdown
 github: https://github.com/turtlesdown
 
 
-# dest: /Users/gunnar/Sites/turtlesdown.github.io
+dest: /Users/gunnar/Sites/turtlesdown.github.io
 destignore:
   - .git
   - README.md
