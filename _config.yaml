@@ -1,12 +1,15 @@
 title: Turtles Down
+description: Rambling thoughts by Gunnar Aasen, a New York-based full stack developer and product enthusiast.
 author: Gunnar Aasen
 email: gunnar.r.aasen@gmail.com
+copyright: Copyright © 2013 Gunnar Aasen
 baseurl: http://turtlesdown.me/
 RSSlink: http://turtlesdown.me/feed
 twitter: https://twitter.com/turtlesdown
 github: https://github.com/turtlesdown
 
-dest: /Users/gunnar/Sites/test-site
+
+# dest: /Users/gunnar/Sites/turtlesdown.github.io
 destignore:
   - .git
   - README.md

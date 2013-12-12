@@ -6,5 +6,6 @@ layout: default
   <h1>{{ .title }}</h1>
   <cite>Posted on {{ .date | date_to_string }}</cite>
   {{ .content }}
+  <aside>{{ .tags}}
 </article>
 {{ end }}
