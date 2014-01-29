@@ -1,6 +1,6 @@
 ---
-layout: posts
-title: New personal site and blog on Github Pages
+layout: default
+title: New Personal Site
 description: This is my new attempt at creating a personal website/blog that will (hopefully) not become as outdated as the previous one.
 author: Gunnar Aasen
 date: October 11, 2013
