@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h2>All Categories:</h2>
+{{ range $category, $pages := .site.categories }}
+  <h3><a href="/categories/{{ $category }}">{{ $category }}</a></h3>
+  <ul>
+    {{ range $index, $page := $pages }}
+      <li><a href="{{ .url }}">{{ .title }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h2>All Tags:</h2>
+{{ range $tag, $pages := .site.tags }}
+  <h3><a href="/tags/{{ $tag }}">{{ $tag }}</a></h3>
+  <ul>
+    {{ range $index, $page := $pages }}
+      <li><a href="{{ .url }}">{{ .title }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}

@@ -1,11 +1,23 @@
 ---
 layout: default
 ---
-{{ range .site.posts }}
+{{ range $index, $page := .site.posts }}
 <article>
-  <h1>{{ .title }}</h1>
-  <cite>Posted on {{ .date | date_to_string }}</cite>
-  {{ .content }}
-  <aside>{{ .tags}}
+  <h2><a href="{{ .url }}">{{ .title }}</a></h2>
+  <cite><small>Posted on {{ .date | date_to_string }}{{if .categories }} under <a href="/{{ .categories }}">{{ .categories }}</a>{{ end }}</small></cite>
+  <div class="Content">
+    {{ if not $index }}
+      {{ .content }}
+    {{ else }}
+      <p>{{ .description }}... <a href="{{ .url }}">Read more...</a></p>
+    {{ end }}
+  </div>
+  <aside>
+    {{ if .tags }}<div class="Aside-tags"><b>Tags:</b>{{ end }}
+      {{ range $index, $tags := .tags }}{{ if ne $index 0 }}, {{ end }}<a href="/tags/{{ $tags }}">{{ $tags }}</a>{{ end }}
+    {{ if .tags }}</div>{{ end }}
+    <div class="Aside-comments"><a href="{{ .url }}#Comments">Comments</a></div>
+  </aside>
 </article>
+<hr>
 {{ end }}

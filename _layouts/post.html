@@ -1,0 +1,21 @@
+{{ define "post" }}
+  {{ template "header" . }}
+    <article>
+      <h2><a href="{{ .page.url }}">{{ .page.title }}</a></h2>
+      <cite><small>Posted on {{ .page.date | date_to_string }} under <a href="/{{ .page.categories }}">{{.page.categories }}</a></small></cite>
+      <div class="Content">
+        {{ .page.content }}
+      </div>
+      <aside>
+        {{ if .page.tags }}<div class="Aside-tags"><b>Tags:</b>{{ end }}
+          {{ range $index, $tags := .page.tags }}{{ if ne $index 0 }}, {{ end }}<a href="/tags/{{ $tags }}">{{ $tags }}</a>{{ end }}
+        {{ if .page.tags }}</div>{{ end }}
+      </aside>
+      <div class="Comments">
+        <b>Comments:</b><a class="moot" title="{{ .page.title }}" href="https://moot.it/i/turtlesdown/comments:{{ .page.title }}">Post a comment.</a>
+      </div>
+    </article>
+  {{ template "footer" . }}
+{{ end }}
+
+{{ template "post" . }}
